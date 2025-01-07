@@ -65,7 +65,6 @@ export default class StudentsServiceImpl implements StudentsService {
             studentArr[index].scores = {};
         }
         studentArr[index].scores[info.examName.toLowerCase() as keyof Scores] = info.score;
-        this.studentsRepository.writeAll(studentArr);
-        return true;
+        return this.studentsRepository.writeAll(studentArr);
     }
 }
