@@ -20,10 +20,6 @@ export default class StudentsController {
         return this.studentsService.findStudent(id);
     }
 
-    getQuantity(studentArr: string[]): number {
-        return this.studentsService.getQuantity();
-    }
-
     getStudentsByName(name: string): Student[] {
         return this.studentsService.getStudentsByName(name);
     }
